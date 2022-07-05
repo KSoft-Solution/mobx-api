@@ -3,7 +3,15 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Express on Vercel");
+  res.status(200).json({
+    message:"success",
+    data:[
+        {
+            "name":"ashok sahu",
+            "work":"Fullstack"
+        }
+    ]
+  })
 });
 
 app.listen(5000, () => {
