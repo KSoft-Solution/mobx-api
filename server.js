@@ -15,4 +15,4 @@ http.listen(PORT, () => {
   console.log(`server is listening on http://localhost:${PORT}`.green.bold);
 });
 
-export default app
+export default http
