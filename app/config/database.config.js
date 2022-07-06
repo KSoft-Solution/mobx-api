@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 const connectDB = async () => {
   try {
     await mongoose
-      .connect(process.env.DATABASE, {})
+      .connect(process.env.MONGO_URI, {})
       .then((url) =>
         console.log(
           `database connected successfully with ${url?.connection?.port} - ${url?.connection?.name}`
