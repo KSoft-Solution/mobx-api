@@ -7,7 +7,6 @@ import connectDB from "./app/config/database.config.js";
 
 const PORT = process.env.PORT || 5000;
 connectDB()
-
 const http = createServer(app)
 
 
