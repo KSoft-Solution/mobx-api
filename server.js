@@ -1,17 +1,15 @@
-import { config } from "dotenv";
-config();
-import "colors";
-import { createServer } from "http";
-import app from './app/app.js'
-import connectDB from "./app/config/database.config.js";
+require("dotenv").config();
+const colors = require("colors");
+const { createServer } = require("http");
+const app = require("./app/app");
+const connectDB = require("./app/config/database.config");
 
 const PORT = process.env.PORT || 5000;
-connectDB()
-const http = createServer(app)
-
+connectDB();
+const http = createServer(app);
 
 http.listen(PORT, () => {
   console.log(`server is listening on http://localhost:${PORT}`.green.bold);
 });
 
-export default http
+module.exports = http;
